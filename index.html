@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== Page settings ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Developer profile of Camille D. Balala - BS Computer Science, ISPSC.">
+  <title>Camille D. Balala | Developer Profile</title>
+
+  <!-- ===== Bootstrap CSS (from jsDelivr CDN) ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (the small icons used on the page) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- ===== Google Fonts: Playfair Display (headings) and Inter (text) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+  <!-- ===== My own CSS (external file) ===== -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- data-bs-spy: Bootstrap highlights the menu link of the section you are viewing -->
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
+    <div class="container">
+      <a class="navbar-brand brand-mark" href="#hero">C<span>.</span>Balala</a>
+
+      <!-- Menu button that shows on phones -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#philosophy">Philosophy</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== 1. HERO ===== -->
+    <section id="hero" class="hero d-flex align-items-center">
+      <div class="container text-center">
+        <p class="eyebrow">Developer Profile</p>
+        <h1 class="hero-title">Camille D. Balala</h1>
+        <p class="hero-role">BS Computer Science Student </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+          <a href="#projects" class="btn btn-gold btn-lg px-4">View My Work</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg px-4">Get in Touch</a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section"><i class="bi bi-chevron-double-down"></i></a>
+    </section>
+
+    <!-- ===== 2. DEVELOPER PHOTO AND MOTTO ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Photo -->
+          <div class="col-md-5 text-center">
+            <div class="photo-frame mx-auto">
+              <img src="images/profile.jpg" alt="Portrait of Camille D. Balala" class="img-fluid">
+            </div>
+          </div>
+          <!-- Text (filled in by main.js) -->
+          <div class="col-md-7">
+            <p class="eyebrow">About Me</p>
+            <h2 class="section-title">Hello, I'm <em>Camille</em>.</h2>
+            <p class="lead-text">
+              I'm a Computer Science student at Ilocos Sur Polytechnic State College who enjoys turning ideas
+              into clean, working web experiences. I like understanding how things work under the hood
+              and shaping them into something people actually enjoy using.
+            </p>
+            <blockquote class="motto">“Make it work, make it right, make it beautiful.”</blockquote>
+            <ul class="list-unstyled facts mb-0">
+              <li><i class="bi bi-mortarboard"></i>BS Computer Science 2A, ISPSC Main Campus</li>
+              <li><i class="bi bi-code-slash"></i>HTML, CSS, JavaScript, Bootstrap</li>
+              <li><i class="bi bi-geo-alt"></i>Ilocos Sur, Philippines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. DESIGN PHILOSOPHY ===== -->
+    <section id="philosophy" class="section section-dark">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">Design Philosophy</p>
+          <h2 class="section-title">What defines my work</h2>
+          <p class="section-intro mx-auto">
+            My style is quiet and deliberate: restrained colour, generous space, and typography that does the talking.
+            I believe good design should feel effortless to the user, even when it took effort to build.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <article class="principle">
+              <i class="bi bi-brightness-low"></i>
+              <h3>Simplicity First</h3>
+              <p>Every element must earn its place. I remove noise so the message is the first thing people see.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="principle">
+              <i class="bi bi-palette"></i>
+              <h3>Considered Elegance</h3>
+              <p>A limited palette, refined type and careful spacing give my work a calm, confident identity.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="principle">
+              <i class="bi bi-universal-access"></i>
+              <h3>Usable by Everyone</h3>
+              <p>Readable contrast, responsive layouts and clear structure so the work serves every user and device.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="principle">
+              <i class="bi bi-recycle"></i>
+              <h3>Maintainable Code</h3>
+              <p>Separate files, reusable functions and clear comments keep my code easy to read, extend and reuse.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. PROJECTS PORTFOLIO ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">Projects Portfolio</p>
+          <h2 class="section-title">From Midterms to Finals</h2>
+        </div>
+        <div class="row g-4">
+        <div class="col-md-6">
+          <article class="card project-card">
+            <div id="slides0" class="carousel slide">
+              <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/lab3-shoes-home.jpg" class="d-block w-100" alt="Shoesmaryosep Shoe Showcase screenshot 1">
+            </div>
+            <div class="carousel-item">
+              <img src="images/lab3-shoes-details.jpg" class="d-block w-100" alt="Shoesmaryosep Shoe Showcase screenshot 2">
+            </div>
+            <div class="carousel-item">
+              <img src="images/lab3-shoes-flowers.jpg" class="d-block w-100" alt="Shoesmaryosep Shoe Showcase screenshot 3">
+            </div>
+              </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#slides0" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#slides0" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+            </div>
+            <div class="card-body p-4">
+              <span class="badge stage-badge mb-2">Laboratory 3</span>
+              <h3 class="h4 card-title">Shoesmaryosep Shoe Showcase</h3>
+              <p class="card-text">A shoe store showcase page with a hero banner, product highlights, a size guide table, an image gallery and a flower collection page. It uses both internal and external CSS.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3"><span class="badge tech-tag">HTML</span><span class="badge tech-tag">CSS</span></div>
+              <a href="https://github.com/balalacamille/WD1L3_CS2A_BALALA_C" target="_blank" rel="noopener" class="btn btn-outline-burgundy btn-sm">
+                <i class="bi bi-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6">
+          <article class="card project-card">
+            <div id="slides1" class="carousel slide">
+              <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/lab4-grade-equivalents.png" class="d-block w-100" alt="Grade Equivalents screenshot">
+            </div>
+              </div>
+            </div>
+            <div class="card-body p-4">
+              <span class="badge stage-badge mb-2">Laboratory 4</span>
+              <h3 class="h4 card-title">Grade Equivalents</h3>
+              <p class="card-text">A list of enrolled students with their grades. A button shows a second table with each student&rsquo;s grade equivalent, pass/fail remark and academic leader award.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3"><span class="badge tech-tag">HTML</span><span class="badge tech-tag">CSS</span><span class="badge tech-tag">JavaScript</span></div>
+              <a href="https://github.com/balalacamille/WD1L4_CS2A_BALALA_C" target="_blank" rel="noopener" class="btn btn-outline-burgundy btn-sm">
+                <i class="bi bi-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6">
+          <article class="card project-card">
+            <div id="slides2" class="carousel slide">
+              <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/lab5-grocery-list.jpg" class="d-block w-100" alt="Grocery List screenshot">
+            </div>
+            <div class="carousel-item">
+              <img src="images/lab5-grocery-login.jpg" class="d-block w-100" alt="Grocery Login screenshot">
+            </div>
+            <div class="carousel-item">
+              <img src="images/lab5-grocery-register.jpg" class="d-block w-100" alt="Grocery Registration screenshot">
+            </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#slides2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#slides2" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+            <div class="card-body p-4">
+              <span class="badge stage-badge mb-2">Laboratory 5</span>
+              <h3 class="h4 card-title">Grocery App: Register, Login and List</h3>
+              <p class="card-text">A grocery app with a registration form, a login form and a grocery list page where the user types an item name and quantity, adds it to the list, clears the list or logs out.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3"><span class="badge tech-tag">HTML</span><span class="badge tech-tag">CSS</span><span class="badge tech-tag">JavaScript</span></div>
+              <a href="https://github.com/balalacamille/WD1L5_CS2A_BALALA" target="_blank" rel="noopener" class="btn btn-outline-burgundy btn-sm">
+                <i class="bi bi-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6">
+          <article class="card project-card">
+            <div id="slides3" class="carousel slide">
+              <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/queue-home.jpg" class="d-block w-100" alt="Queue Appointment System screenshot 1">
+            </div>
+            <div class="carousel-item">
+              <img src="images/queue-booking.jpg" class="d-block w-100" alt="Queue Appointment System screenshot 2">
+            </div>
+            <div class="carousel-item">
+              <img src="images/queue-status.jpg" class="d-block w-100" alt="Queue Appointment System screenshot 3">
+            </div>
+              </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#slides3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#slides3" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+            </div>
+            <div class="card-body p-4">
+              <span class="badge stage-badge mb-2">Featured Project</span>
+              <h3 class="h4 card-title">Queue Appointment System</h3>
+              <p class="card-text">A cashier and registrar queue system. Students book an appointment for tuition payment, document request or ID claiming, then follow the live queue status.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3"><span class="badge tech-tag">HTML</span><span class="badge tech-tag">CSS</span><span class="badge tech-tag">JavaScript</span></div>
+              <a href="https://github.com/balalacamille/Queue-Appointment-System" target="_blank" rel="noopener" class="btn btn-outline-burgundy btn-sm">
+                <i class="bi bi-github me-1"></i>View on GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. CONTACT US ===== -->
+    <section id="contact" class="section section-dark">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">Contact Us</p>
+          <h2 class="section-title">Let's build something together</h2>
+        </div>
+
+        <div class="row g-5 justify-content-center">
+          <!-- Contact details -->
+          <div class="col-lg-4">
+            <ul class="list-unstyled contact-list">
+              <li>
+                <i class="bi bi-envelope"></i>
+                <a href="mailto:camillebalala8@gmail.com" target="_blank" rel="noopener">camillebalala8@gmail.com</a>
+              </li>
+              <li>
+                <i class="bi bi-github"></i>
+                <a href="https://github.com/balalacamille" target="_blank" rel="noopener">github.com/balalacamille</a>
+              </li>
+              <li>
+                <i class="bi bi-facebook"></i>
+                <a href="https://facebook.com/Camille%20Balala" target="_blank" rel="noopener">Camille Balala</a>
+              </li>
+              <li>
+                <i class="bi bi-geo-alt"></i>
+                <a href="#contact" target="_blank" rel="noopener">Ilocos Sur, Philippines</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact form (checked by main.js) -->
+          <div class="col-lg-7">
+            <form id="contactForm" class="contact-form needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="cName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="cName" required minlength="2">
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="cEmail" required>
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="col-12">
+                  <label for="cMessage" class="form-label">Message</label>
+                  <textarea class="form-control" id="cMessage" rows="5" required minlength="10"></textarea>
+                  <div class="invalid-feedback">Your message should be at least 10 characters.</div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-gold px-4">Send Message</button>
+                  <span id="formStatus" class="ms-3 small" role="status"></span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer text-center">
+    <div class="container">
+      <p class="mb-1">Designed &amp; coded with care.</p>
+      <p class="mb-0 small">&copy; <span id="year"></span> Camille D. Balala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Bootstrap JS (menu button, scroll highlight, image slider) ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ===== My own JavaScript (external file) ===== -->
+  <script src="js/main.js"></script>
+</body>
+</html>

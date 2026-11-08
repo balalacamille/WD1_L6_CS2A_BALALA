@@ -1,0 +1,238 @@
+/* ---------- 1. Colors and fonts ---------- */
+:root {
+  --burgundy-900: #2b0711;   /* darkest, used for dark sections */
+  --burgundy-800: #3d0b19;
+  --burgundy-700: #5a1226;   /* main color */
+  --burgundy-500: #7e1d38;
+  --cream:        #f7efe9;   /* light section background */
+  --ink:          #2a1a1f;   /* normal text color */
+  --muted:        #7a6a6e;   /* softer text color */
+  --gold:         #c9a66b;   /* accent color */
+  --radius:       14px;      /* rounded corners */
+  --font-head: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+/* ---------- 2. Page basics ---------- */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-head); }
+a { color: var(--burgundy-500); }
+
+/* ---------- 3. Navbar ---------- */
+.site-nav {
+  padding: 1rem 0;
+  transition: all .3s ease;
+}
+
+/* "scrolled" is added by main.js when the page is scrolled down */
+.site-nav.scrolled {
+  background: rgba(43, 7, 17, .96);
+  padding: .55rem 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, .25);
+}
+
+.brand-mark { font-family: var(--font-head); font-weight: 700; }
+.brand-mark span { color: var(--gold); }
+
+.site-nav .nav-link {
+  color: rgba(255, 255, 255, .75);
+  font-size: .9rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.site-nav .nav-link:hover,
+.site-nav .nav-link.active { color: var(--gold); }
+
+/* Phone menu background */
+@media (max-width: 991.98px) {
+  .site-nav .navbar-collapse {
+    background: var(--burgundy-900);
+    padding: 1rem;
+    margin-top: .5rem;
+    border-radius: var(--radius);
+  }
+}
+
+/* ---------- 4. Hero  ---------- */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  color: #fff;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(126, 29, 56, .55), transparent 55%),
+    linear-gradient(160deg, var(--burgundy-700), var(--burgundy-900));
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.hero-title { font-size: clamp(2.6rem, 8vw, 5rem); font-weight: 700; }
+.hero-role  { font-size: clamp(1.1rem, 3vw, 1.5rem); color: rgba(255, 255, 255, .8); }
+
+/* Bouncing arrow at the bottom of the hero */
+.scroll-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 1.4rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce { 50% { transform: translate(-50%, 8px); } }
+
+/* ---------- 5. Buttons ---------- */
+.btn-gold {
+  background: var(--gold);
+  color: var(--burgundy-900);
+  border: 1px solid var(--gold);
+  font-weight: 600;
+}
+.btn-gold:hover { background: transparent; color: var(--gold); }
+
+.btn-outline-burgundy { color: var(--burgundy-700); border: 1px solid var(--burgundy-700); }
+.btn-outline-burgundy:hover { background: var(--burgundy-700); color: #fff; }
+
+/* ---------- 6. Sections (shared styles) ---------- */
+.section { padding: 6rem 0; }
+.section-dark { background: var(--burgundy-900); color: #f3e8e4; }
+
+.section-title { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; }
+.section-title em { color: var(--burgundy-500); }
+.section-intro { max-width: 680px; color: rgba(243, 232, 228, .8); }
+.lead-text { color: var(--muted); font-size: 1.05rem; }
+
+/* Small title above each heading: gold on dark, burgundy on light */
+.section-dark .eyebrow { color: var(--gold); }
+.section:not(.section-dark) .eyebrow { color: var(--burgundy-500); }
+
+/* ---------- 7. About: photo and motto ---------- */
+.photo-frame {
+  width: min(320px, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(135deg, var(--burgundy-500), var(--gold));
+  box-shadow: 0 20px 50px rgba(90, 18, 38, .3);
+}
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--cream);
+}
+
+.motto {
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--burgundy-700);
+  border-left: 3px solid var(--gold);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.facts li { padding: .25rem 0; color: var(--muted); }
+.facts i { color: var(--burgundy-500); margin-right: .6rem; }
+
+/* ---------- 8. Design philosophy cards ---------- */
+.principle {
+  height: 100%;
+  padding: 2rem 1.6rem;
+  border: 1px solid rgba(201, 166, 107, .25);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .03);
+  transition: all .3s ease;
+}
+.principle:hover { transform: translateY(-6px); border-color: var(--gold); }
+.principle i { font-size: 1.8rem; color: var(--gold); }
+.principle h3 { font-size: 1.25rem; margin: 1rem 0 .5rem; }
+.principle p { margin: 0; font-size: .95rem; color: rgba(243, 232, 228, .75); }
+
+/* ---------- 9. Project cards ---------- */
+.project-card {
+  height: 100%;
+  border: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(90, 18, 38, .1);
+  transition: all .3s ease;
+}
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(90, 18, 38, .2); }
+
+/* Screenshots: same size for every slide, cropped from the top */
+.project-card .carousel-item img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  background: var(--burgundy-800);
+}
+
+/* Round dark arrows so they can be seen on any screenshot */
+.project-card .carousel-control-prev-icon,
+.project-card .carousel-control-next-icon {
+  background-color: rgba(43, 7, 17, .65);
+  background-size: 50%;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.stage-badge { background: var(--burgundy-700); color: var(--gold); font-weight: 500; }
+.tech-tag {
+  background: var(--cream);
+  color: var(--burgundy-700);
+  font-weight: 500;
+  border: 1px solid rgba(90, 18, 38, .15);
+}
+.project-card .card-text { color: var(--muted); font-size: .95rem; }
+
+/* ---------- 10. Contact ---------- */
+.contact-list li { display: flex; align-items: center; gap: 1rem; padding: .8rem 0; }
+.contact-list i {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+.contact-list a { color: #f3e8e4; text-decoration: none; }
+.contact-list a:hover { color: var(--gold); }
+
+.contact-form .form-label {
+  font-size: .85rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.contact-form .form-control {
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(201, 166, 107, .3);
+  color: #fff;
+}
+.contact-form .form-control:focus {
+  background: rgba(255, 255, 255, .1);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 .2rem rgba(201, 166, 107, .2);
+}
+#formStatus { color: var(--gold); }
+
+/* ---------- 11. Footer ---------- */
+.site-footer { background: #1d0409; color: rgba(243, 232, 228, .6); padding: 2rem 0; }
